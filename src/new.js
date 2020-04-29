@@ -1,3 +1,6 @@
+/**
+ * this is User.
+ */
 function User(name) {
   // 构造器模式测试
   console.info("target: ", new.target);

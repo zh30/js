@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: new.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,36 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: new.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * this is User.
+ */
+function User(name) {
+  // 构造器模式测试
+  console.info("target: ", new.target);
+  if (!new.target) {
+    return new User(name);
+  }
+  // this = {}
+  this.name = name;
+  this.isAdmin = false;
+  // return this;
+}
+User("nan");
+const user = new User("he");
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+console.info("user: ", user);
+</code></pre>
+        </article>
+    </section>
 
 
 

@@ -6,11 +6,10 @@
   "repository": "git@github.com:zhanghecool/js.git",
   "author": "zhanghe <zhanghecool@outlook.com>",
   "license": "MIT",
-  "dependencies": {
-    "esdoc": "^1.1.0",
-    "esdoc-standard-plugin": "^1.0.0"
-  },
   "scripts": {
-    "start": "esdoc"
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.4"
   }
 }
