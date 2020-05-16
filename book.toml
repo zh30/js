@@ -6,9 +6,6 @@ src = "src"
 title = "Javascrip Docs"
 description = "Javascrip 文档"
 
-[build]
-build-dir = "docs"
-
 [output.html]
 theme = "theme"
 mathjax-support = true
