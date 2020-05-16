@@ -1,0 +1,20 @@
+[book]
+authors = ["Zhang He"]
+language = "zh-CN"
+multilingual = false
+src = "src"
+title = "Javascrip Docs"
+description = "Javascrip 文档"
+
+[build]
+build-dir = "docs"
+
+[output.html]
+theme = "theme"
+mathjax-support = true
+preferred-dark-theme = "ayu"
+google-analytics = "UA-166861237-2"
+git-repository-url = "https://github.com/zhanghecool/js"
+
+[output.html.playpen]
+editable = true
