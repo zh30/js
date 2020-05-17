@@ -1,6 +1,7 @@
-# 介绍
+# JavaScript 概述
 
-<iframe height="500" style="width: 100%;" scrolling="no" title="Dog selector" src="https://codepen.io/ricardoolivaalonso/embed/JjYaOom?height=500&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/ricardoolivaalonso/pen/JjYaOom'>Dog selector</a> by Ricardo Oliva Alonso
-  (<a href='https://codepen.io/ricardoolivaalonso'>@ricardoolivaalonso</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+JavaScript 是一门具有 [函数优先](./first-class-function.md) 的轻量级，解释型的编程语言。  
+
+JavaScript 是一种基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式和函数式的编程风格。  
+
+JavaScript 的标准是 [ECMAScript](./ECMAScript.md)。
