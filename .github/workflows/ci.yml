@@ -37,6 +37,7 @@ jobs:
         run: |
           mdbook build
           cd book
+          echo 'js.zhanghe.cool' > CNAME
           cd ..
 
       - name: Debug
