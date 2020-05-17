@@ -37,7 +37,6 @@ jobs:
         run: |
           mdbook build
           cd book
-          echo 'js.zhanghe.cool' > CNAME
           cd ..
 
       - name: Debug
@@ -51,4 +50,4 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: book # The folder the action should deploy.
           CLEAN: true
-          DEBUG: true
+          CLEAN_EXCLUDE: '["CNAME"]'
