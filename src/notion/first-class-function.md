@@ -42,4 +42,4 @@ const zh = function() {
 zh();
 ````
 
-[相关链接](https://zh.wikipedia.org/wiki/%E5%A4%B4%E7%AD%89%E5%87%BD%E6%95%B0)
+[参考链接](https://zh.wikipedia.org/wiki/%E5%A4%B4%E7%AD%89%E5%87%BD%E6%95%B0)
