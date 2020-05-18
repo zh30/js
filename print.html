@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> 介绍</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="notion/first-class-function.html"><strong aria-hidden="true">1.1.</strong> 头等函数</a></li><li class="chapter-item expanded "><a href="notion/interpreted-language.html"><strong aria-hidden="true">1.2.</strong> 解释型语言</a></li><li class="chapter-item expanded "><a href="notion/ECMAScript.html"><strong aria-hidden="true">1.3.</strong> ECMAScript</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -157,9 +157,53 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#javascript-概述" id="javascript-概述">JavaScript 概述</a></h1>
-<p>JavaScript 是一门具有 <a href="first-class-function.html">函数优先</a> 的轻量级，解释型的编程语言。</p>
+<p>JavaScript 是一门具有 <a href="notion/first-class-function.html">函数优先</a> 的轻量级，<a href="notion/interpreted-language.html">解释型</a> 的编程语言。</p>
 <p>JavaScript 是一种基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式和函数式的编程风格。</p>
-<p>JavaScript 的标准是 <a href="ECMAScript.html">ECMAScript</a>。</p>
+<p>JavaScript 的标准是 <a href="notion/ECMAScript.html">ECMAScript</a>。</p>
+<h1><a class="header" href="#first-class-function头等函数" id="first-class-function头等函数">First-class Function（头等函数）</a></h1>
+<p><code>头等函数</code> 是指在程序设计语言中，函数被当作一等公民。这意味着，函数可以作为</p>
+<ul>
+<li><a href="notion/first-class-function.html#%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0">别的函数的参数</a></li>
+<li><a href="notion/first-class-function.html#%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC">函数的返回值</a></li>
+<li><a href="notion/first-class-function.html#%E8%B5%8B%E5%80%BC%E7%BB%99%E5%8F%98%E9%87%8F">赋值给变量</a></li>
+<li>存储在数据结构中</li>
+</ul>
+<h2><a class="header" href="#作为函数的参数" id="作为函数的参数">作为函数的参数</a></h2>
+<pre><code class="language-javascript">function sayHi() {
+  return &quot;Hi, &quot;;
+}
+
+function join(hiText, name) {
+  console.info(hiText() + name);
+}
+
+join(sayHi, &quot;Zhang He!&quot;); // Hi, Zhang He!
+</code></pre>
+<h2><a class="header" href="#作为函数的返回值" id="作为函数的返回值">作为函数的返回值</a></h2>
+<pre><code class="language-javascript">function sayHi() {
+  return function() {
+    console.info(&quot;Hi!&quot;);
+  }
+}
+
+sayHi()();
+</code></pre>
+<h2><a class="header" href="#赋值给变量" id="赋值给变量">赋值给变量</a></h2>
+<pre><code class="language-javascript">const zh = function() {
+  console.info(&quot;zhanghe&quot;);
+}
+
+zh();
+</code></pre>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%A4%B4%E7%AD%89%E5%87%BD%E6%95%B0">参考链接</a></p>
+<h1><a class="header" href="#解释型语言" id="解释型语言">解释型语言</a></h1>
+<p>解释型语言是一种编程语言类型。这种类型的编程语言，会 <code>将代码一句一句直接运行</code>，不需要像编译语言一样，经过编译器先行编译为机器代码，之后再运行。这种编程语言需要利用解释器，在运行期，动态将代码逐句解释为机器代码，或是已经预先编译为机器代码的子程序，之后再运行。</p>
+<p><code>理论上，任何编程语言都可以是编译式，或解释型的。它们之间的区别，仅与程序的应用有关</code>。许多编程语言同时采用编译器与解释器来实现，其中包括 Lisp，Pascal，C，BASIC 与 Python。JAVA 及 C# 采用混合方式，先将代码编译为字节码，在运行时再进行解释。</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E7%9B%B4%E8%AD%AF%E8%AA%9E%E8%A8%80">参考链接</a></p>
+<h1><a class="header" href="#ecmascript" id="ecmascript">ECMAScript</a></h1>
+<p>ECMAScript 是由 <code>Ecma国际标准组织</code> 以 <code>ECMA-262</code> 和 <code>ECMA-402</code> 规范的形式进行标准化的。</p>
+<p>ECMAScript 是 JavaScript 的 <code>规范</code>，<br />
+JavaScript 是 ECMAScript 的 <code>实现</code>。</p>
 
                     </main>
 
