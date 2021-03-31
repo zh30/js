@@ -1,10 +1,10 @@
 [book]
-authors = ["Zhang He"]
+authors = ["张赫"]
 language = "zh-CN"
 multilingual = false
 src = "src"
-title = "Javascrip Docs"
-description = "Javascrip 文档"
+title = "Javascrip Handbook"
+description = "Javascrip 手册"
 
 [output.html]
 theme = "theme"
