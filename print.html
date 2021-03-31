@@ -3,26 +3,38 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Javascrip Docs</title>
+        <title>Javascrip Handbook</title>
         
         <meta name="robots" content="noindex" />
         
+        
+
+
+        <!-- Custom HTML head -->
+        
+
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Javascrip 文档">
+        <meta name="description" content="Javascrip 手册">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
+        
+        
         <link rel="shortcut icon" href="favicon.png">
+        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
+        
         <link rel="stylesheet" href="css/print.css" media="print">
+        
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
@@ -118,12 +130,14 @@
                         
                     </div>
 
-                    <h1 class="menu-title">Javascrip Docs</h1>
+                    <h1 class="menu-title">Javascrip Handbook</h1>
 
                     <div class="right-buttons">
+                        
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        
                         
                         <a href="https://github.com/zhanghecool/js" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
@@ -156,11 +170,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#javascript-概述" id="javascript-概述">JavaScript 概述</a></h1>
+                        <h1 id="javascript-概述"><a class="header" href="#javascript-概述">JavaScript 概述</a></h1>
 <p>JavaScript 是一门具有 <a href="notion/first-class-function.html">函数优先</a> 的轻量级，<a href="notion/interpreted-language.html">解释型</a> 的编程语言。</p>
 <p>JavaScript 是一种基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式和函数式的编程风格。</p>
 <p>JavaScript 的标准是 <a href="notion/ECMAScript.html">ECMAScript</a>。</p>
-<h1><a class="header" href="#first-class-function头等函数" id="first-class-function头等函数">First-class Function（头等函数）</a></h1>
+<h1 id="first-class-function头等函数"><a class="header" href="#first-class-function头等函数">First-class Function（头等函数）</a></h1>
 <p><code>头等函数</code> 是指在程序设计语言中，函数被当作一等公民。这意味着，函数可以作为</p>
 <ul>
 <li><a href="notion/first-class-function.html#%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0">别的函数的参数</a></li>
@@ -168,7 +182,7 @@
 <li><a href="notion/first-class-function.html#%E8%B5%8B%E5%80%BC%E7%BB%99%E5%8F%98%E9%87%8F">赋值给变量</a></li>
 <li>存储在数据结构中</li>
 </ul>
-<h2><a class="header" href="#作为函数的参数" id="作为函数的参数">作为函数的参数</a></h2>
+<h2 id="作为函数的参数"><a class="header" href="#作为函数的参数">作为函数的参数</a></h2>
 <pre><code class="language-javascript">function sayHi() {
   return &quot;Hi, &quot;;
 }
@@ -179,7 +193,7 @@ function join(hiText, name) {
 
 join(sayHi, &quot;Zhang He!&quot;); // Hi, Zhang He!
 </code></pre>
-<h2><a class="header" href="#作为函数的返回值" id="作为函数的返回值">作为函数的返回值</a></h2>
+<h2 id="作为函数的返回值"><a class="header" href="#作为函数的返回值">作为函数的返回值</a></h2>
 <pre><code class="language-javascript">function sayHi() {
   return function() {
     console.info(&quot;Hi!&quot;);
@@ -188,7 +202,7 @@ join(sayHi, &quot;Zhang He!&quot;); // Hi, Zhang He!
 
 sayHi()();
 </code></pre>
-<h2><a class="header" href="#赋值给变量" id="赋值给变量">赋值给变量</a></h2>
+<h2 id="赋值给变量"><a class="header" href="#赋值给变量">赋值给变量</a></h2>
 <pre><code class="language-javascript">const zh = function() {
   console.info(&quot;zhanghe&quot;);
 }
@@ -196,11 +210,11 @@ sayHi()();
 zh();
 </code></pre>
 <p><a href="https://zh.wikipedia.org/wiki/%E5%A4%B4%E7%AD%89%E5%87%BD%E6%95%B0">参考链接</a></p>
-<h1><a class="header" href="#解释型语言" id="解释型语言">解释型语言</a></h1>
+<h1 id="解释型语言"><a class="header" href="#解释型语言">解释型语言</a></h1>
 <p>解释型语言是一种编程语言类型。这种类型的编程语言，会 <code>将代码一句一句直接运行</code>，不需要像编译语言一样，经过编译器先行编译为机器代码，之后再运行。这种编程语言需要利用解释器，在运行期，动态将代码逐句解释为机器代码，或是已经预先编译为机器代码的子程序，之后再运行。</p>
 <p><code>理论上，任何编程语言都可以是编译式，或解释型的。它们之间的区别，仅与程序的应用有关</code>。许多编程语言同时采用编译器与解释器来实现，其中包括 Lisp，Pascal，C，BASIC 与 Python。JAVA 及 C# 采用混合方式，先将代码编译为字节码，在运行时再进行解释。</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E7%9B%B4%E8%AD%AF%E8%AA%9E%E8%A8%80">参考链接</a></p>
-<h1><a class="header" href="#ecmascript" id="ecmascript">ECMAScript</a></h1>
+<h1 id="ecmascript"><a class="header" href="#ecmascript">ECMAScript</a></h1>
 <p>ECMAScript 是由 <code>Ecma国际标准组织</code> 以 <code>ECMA-262</code> 和 <code>ECMA-402</code> 规范的形式进行标准化的。</p>
 <p>ECMAScript 是 JavaScript 的 <code>规范</code>，<br />
 JavaScript 是 ECMAScript 的 <code>实现</code>。</p>
@@ -248,10 +262,10 @@ JavaScript 是 ECMAScript 的 <code>实现</code>。</p>
         
 
         
-        
+
         
         <script type="text/javascript">
-            window.playpen_copyable = true;
+            window.playground_copyable = true;
         </script>
         
 
